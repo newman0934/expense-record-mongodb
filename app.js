@@ -96,6 +96,6 @@ app.use("/users", require("./routes/user"));
 app.use("/auth", require("./routes/auths"));
 app.use("/search", require("./routes/search"))
 
-app.listen(process.env.MONGODB_URI || port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log("app listening");
 });
