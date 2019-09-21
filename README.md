@@ -32,7 +32,7 @@
 - passport-google-oauth20: ^2.0.0
 
 ### Installation
-- Download restaurant ZIP
+- Download ZIP
 - 解壓縮ZIP檔案
 - 下載nvm並安裝
 - 打開cmd
@@ -41,10 +41,10 @@
 - 在cmd輸入nvm use 10.15.0
 - 安裝mongodb
 - 安裝mongoose
-- 在mongoose建立一個restaurant資料庫
+- 在mongoose建立一個record資料庫
 - cd到seeds資料夾
 - 輸入node seeder.js
-- cd到expense-record_mongodb位址
+- cd到expense-record-mongodb位址
 - 在根目錄新增一個.env檔案並把以下code輸入到裡面
 ```js
 FACEBOOK_ID=你的facebook_id
