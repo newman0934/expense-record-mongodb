@@ -12,10 +12,10 @@
 - google登入
 ## Quick view
 
-![index page](https://raw.githubusercontent.com/newman0934/expense-record_mongodb/master/public/img/index.png)
-![edit page](https://raw.githubusercontent.com/newman0934/expense-record_mongodb/master/public/img/edit.png)
-![login page](https://raw.githubusercontent.com/newman0934/expense-record_mongodb/master/public/img/login.png)
-![register page](https://raw.githubusercontent.com/newman0934/expense-record_mongodb/master/public/img/register.png)
+![index page](https://raw.githubusercontent.com/newman0934/expense-record-mongodb/master/public/img/index.png)
+![edit page](https://raw.githubusercontent.com/newman0934/expense-record-mongodb/master/public/img/edit.png)
+![login page](https://raw.githubusercontent.com/newman0934/expense-record-mongodb/master/public/img/login.png)
+![register page](https://raw.githubusercontent.com/newman0934/expense-record-mongodb/master/public/img/register.png)
 ## Environment set up
 - bcryptjs: ^2.4.3,
 - body-parser: ^1.19.0,
