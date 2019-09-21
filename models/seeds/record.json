@@ -1,0 +1,34 @@
+{
+    "results": [
+      {
+        "name": "午餐",
+        "category": "utensils",
+        "amount": 100,
+        "date": "2019-09-01"
+      },
+      {
+        "name": "計程車",
+        "category": "shuttle-van",
+        "amount": 250,
+        "date": "2019-09-02"
+      },
+      {
+        "name": "PS4",
+        "category": "grin-beam",
+        "amount": 10000,
+        "date": "2019-09-03"
+      },
+      {
+        "name": "牛排",
+        "category": "utensils",
+        "amount": 150,
+        "date": "2019-09-06"
+      },
+      {
+        "name": "金錢豹",
+        "category": "pen",
+        "amount": 9000,
+        "date": "2019-09-07"
+      }
+    ]
+  }
