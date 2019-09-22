@@ -57,3 +57,9 @@ GOOGLE_CALLBACK=http://localhost:3000/auth/google/callback
 ```
 - 輸入node app.js
 - 在瀏覽器上進入http://localhost:3000
+
+- 測試帳號
+```js
+Email=caesar@gmail.com
+password=111
+```

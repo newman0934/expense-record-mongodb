@@ -1,0 +1,24 @@
+{
+    "results": {
+      "home": {
+        "chineseName": "家居物業",
+        "image": "home"
+      },
+      "shuttle-van": {
+        "chineseName": "交通出行",
+        "image": "shuttle-van"
+      },
+      "grin-beam": {
+        "chineseName": "休閒娛樂",
+        "image": "grin-beam"
+      },
+      "utensils": {
+        "chineseName": "餐飲食品",
+        "image": "utensils"
+      },
+      "pen": {
+        "chineseName": "其他",
+        "image": "pen"
+      }
+    }
+  }

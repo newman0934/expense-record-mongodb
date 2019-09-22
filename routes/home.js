@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const Record = require("../models/record");
+const categoryList = require("../models/recordList").results
+
 const {
   authenticated
 } = require("../config/auth")
@@ -8,6 +10,9 @@ const {
 router.get("/", authenticated, (req, res) => {
   const filterMonth = req.query.filterMonth || ''
   const filterCategory = req.query.filterCategory || ''
+ 
+  const categoryChinese = categoryList[filterCategory] === undefined ? '' : categoryList[filterCategory]['chineseName']
+  
 
   let sql = ''
 
@@ -88,17 +93,16 @@ router.get("/", authenticated, (req, res) => {
   Record.aggregate(sql)
     .exec((err, records) => {
       if (err) return console.error(err);
-
       let totalAmount = 0;
       records.map(record => {
         totalAmount += record.amount;
       });
-      console.log(records)
       res.render("index", {
         records,
         totalAmount,
         filterCategory,
         filterMonth,
+        categoryChinese
       });
     });
 });
