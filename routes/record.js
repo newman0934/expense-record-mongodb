@@ -20,13 +20,15 @@ router.post("/", authenticated, (req, res) => {
     name,
     date,
     category,
-    amount
+    amount,
+    merchant
   } = req.body;
   const record = new Record({
     name,
     date,
     category,
     amount,
+    merchant,
     userId: req.user._id,
   });
   record.save(err => {
@@ -37,20 +39,19 @@ router.post("/", authenticated, (req, res) => {
 
 // 修改 record 頁面
 router.get("/:id/edit", authenticated, (req, res) => {
-  Record.findById({
+  Record.findOne({
     _id: req.params.id,
     userId: req.user._id
   }, (err, record) => {
     if (err) return console.error(err)
-    console.log(record)
     res.render("edit", {
-      record
+      record,
     })
   })
 });
 // 修改 record
 router.put("/:id", authenticated, (req, res) => {
-  Record.findById({
+  Record.findOne({
     _id: req.params.id,
     userId: req.user._id
   }, (err, record) => {
@@ -58,7 +59,8 @@ router.put("/:id", authenticated, (req, res) => {
     record.name = req.body.name,
       record.category = req.body.category,
       record.date = req.body.date,
-      record.amount = req.body.amount
+      record.amount = req.body.amount,
+      record.merchant = req.body.merchant
 
     record.save(err => {
       if (err) return console.error(err)
@@ -68,7 +70,7 @@ router.put("/:id", authenticated, (req, res) => {
 });
 // 刪除 record
 router.delete("/:id/delete", authenticated, (req, res) => {
-  Record.findById({
+  Record.findOne({
     _id: req.params.id,
     userId: req.user._id
   }, (err, record) => {

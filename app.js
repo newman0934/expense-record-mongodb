@@ -52,8 +52,12 @@ app.use((req, res, next) => {
 // create equals help function
 const handlebars = require("handlebars")
 handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
-  console.log(arg1, arg2)
   return (arg1 === arg2) ? options.fn(this) : options.inverse(this);
+})
+
+handlebars.registerHelper('dateFormat', function (date) {
+  let formatDate = date.toISOString().split("T")[0]
+  return formatDate
 })
 
 
@@ -94,7 +98,6 @@ app.use("/", require("./routes/home"));
 app.use("/records", require("./routes/record"));
 app.use("/users", require("./routes/user"));
 app.use("/auth", require("./routes/auths"));
-app.use("/search", require("./routes/search"))
 
 app.listen(process.env.PORT || port, () => {
   console.log("app listening");

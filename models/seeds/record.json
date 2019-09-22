@@ -4,7 +4,8 @@
         "name": "午餐",
         "category": "utensils",
         "amount": 100,
-        "date": "2019-09-01"
+        "date": "2019-09-01",
+        "merchant": "三媽臭臭鍋"
       },
       {
         "name": "計程車",
@@ -22,7 +23,8 @@
         "name": "牛排",
         "category": "utensils",
         "amount": 150,
-        "date": "2019-09-06"
+        "date": "2019-09-06",
+        "merchant": "貴族世家"
       },
       {
         "name": "金錢豹",
